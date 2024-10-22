@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    /*background: linear-gradient(to right, #fdfcff, #ffffff);*/
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Matching background color */
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Ensure consistent background for all sections */
+.skills, .projects, .experience, .contact-form-section, .Hero{
+    background-color: #2f3e4d; /* Same dark background for all sections */
+    color: #ffffff; /* White text for readability */
+}
+
+

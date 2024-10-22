@@ -1,0 +1,127 @@
+.education-experience {
+  background-color: #2f3e4d; /* Darker background for the entire section */
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 0;
+  background-color: #2f3e4d; /* Same dark color as the parent container */
+}
+
+.timeline-entry {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  opacity: 0; /* Start hidden */
+  animation: slide-in 1.5s ease-out forwards;
+}
+
+.timeline-entry.left {
+  float: left;
+  clear: both;
+  text-align: right;
+  animation-name: slide-in-left; /* Specific animation for left cards */
+}
+
+.timeline-entry.right {
+  float: right;
+  clear: both;
+  text-align: left;
+  animation-name: slide-in-right; /* Specific animation for right cards */
+}
+
+.icon-container {
+  background-color: #ffffff;
+  color: #ec6271;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.timeline-entry.left .icon-container {
+  right: -20px;
+}
+
+.timeline-entry.right .icon-container {
+  left: -20px;
+}
+
+.icon {
+  font-size: 1.2em;
+}
+
+.timeline-content {
+  background-color: #445a75; /* Darker blue background */
+  padding: 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.timeline-content h3 {
+  font-size: 1.3em;
+  margin-top: 0;
+}
+
+.timeline-content p {
+  margin: 10px 0;
+}
+
+.timeline-content .date {
+  font-size: 0.9em;
+  color: #dcdcdc;
+}
+
+.timeline-entry.left .timeline-content {
+  margin-right: 80px;
+}
+
+.timeline-entry.right .timeline-content {
+  margin-left: 80px;
+}
+
+/* Animation for left side cards */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Slide in to original position */
+    opacity: 1;
+  }
+}
+
+/* Animation for right side cards */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Slide in to original position */
+    opacity: 1;
+  }
+}

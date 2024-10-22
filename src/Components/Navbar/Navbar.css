@@ -1,0 +1,33 @@
+.navbar {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the menu */
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF; /* Changed to White Background */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    padding: 15px 0; /* Adjust padding for space */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #A757F6; /* Changed to Bright Purple for better contrast */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #212B39; /* Changed to Darker Purple on Hover */
+}

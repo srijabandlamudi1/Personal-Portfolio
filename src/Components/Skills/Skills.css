@@ -1,0 +1,81 @@
+.skills {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  text-align: center;
+  background-color: #F8F5FF !important; /* Light Pastel Purple Background */
+  color: #212B39; /* Dark Gray/Black text */
+  width: 100%;
+  margin: 0;
+}
+
+/* Update the title style */
+.skills-title {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.skills-title h1 {
+  padding: 0px 30px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #A757F6; /* Bright Purple to match other section titles */
+}
+
+/* Center and adjust icons freely */
+.skills-container {
+  display: flex; /* Change from grid to flex */
+  flex-wrap: nowrap; /* Ensure items are in a single line */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center; /* Center items vertically */
+  gap: 30px; /* Space between the cards */
+  width: 80%; /* Restrict width for better centering */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #A757F6 #F8F5FF; /* Custom scrollbar colors */
+  margin: 0 auto;
+}
+
+/* Style each skill card */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #FFFFFF; /* White for skill cards */
+  border-radius: 10px;
+  width: 120px; /* Adjust width for uniformity */
+  height: 120px; /* Adjust height for uniformity */
+  overflow: hidden;
+  transition: transform 0.3s; /* Smooth scaling on hover */
+  flex: 0 0 auto; /* Prevent cards from stretching */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Scale card on hover */
+}
+
+/* Style the icons or images */
+.card img {
+  width: 80px; /* Adjust size */
+  height: 80px;
+}
+
+/* Customize scrollbar for Webkit browsers */
+.skills-container::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.skills-container::-webkit-scrollbar-track {
+  background: #F8F5FF; /* Track color */
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+  background-color: #A757F6; /* Handle color */
+  border-radius: 10px;
+}

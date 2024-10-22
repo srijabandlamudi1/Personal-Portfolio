@@ -1,0 +1,68 @@
+.side-navbar {
+    position: fixed;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    padding: 10px;
+    z-index: 1000; 
+}
+
+.side-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-navbar li {
+    margin: 10px 0;
+    position: relative; 
+}
+
+.sidenav-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Fixed size for circular container */
+    height: 50px; /* Fixed size for circular container */
+    background-color: #A757F6; /* Bright Purple to match theme */
+    border-radius: 50%; /* Make it a perfect circle */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.side-navbar a {
+    color: #FFFFFF; /* White color for icons */
+    font-size: 1.8rem; /* Icon size */
+    transition: transform 0.3s ease;
+}
+
+.sidenav-icon-container:hover {
+    background-color: #8A3ECC; /* Slightly darker shade of purple on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.tooltip {
+    position: absolute;
+    left: 60px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #212B39; /* Dark Gray/Black for tooltip */
+    color: #FFFFFF; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidenav-icon-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}

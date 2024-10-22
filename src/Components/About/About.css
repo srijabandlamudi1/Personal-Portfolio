@@ -1,0 +1,96 @@
+.about-section {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 50px 0; /* Adjust padding to match other sections */
+  text-align: center;
+  background-color: #FFFFFF; /* White background */
+  color: #212B39; /* Dark Gray/Black text for readability */
+}
+
+.about-heading {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0px 30px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #A757F6; /* Bright Purple to match the theme */
+}
+
+/*.about-section h1 span {
+  background: linear-gradient(270deg, #A757F6 10%, #F8F5FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+
+.about-content {
+  display: flex;
+  justify-content: space-between; /* Keep left and right sections on sides */
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto; /* Center the entire content block */
+  padding: 0 20px; /* Add padding on the sides */
+}
+
+.left-section {
+  flex: 1;
+  padding: 10px;
+  text-align: right;
+  margin-right: 20px; /* Add space between left and center line */
+}
+
+.left-section h2 {
+  font-size: 1.5rem;
+  color: #212B39; /* Dark Gray/Black for consistent text color */
+}
+
+.left-section p {
+  margin: 5px 0;
+  color: #212B39; /* Dark Gray/Black */
+}
+
+.left-section a {
+  color: #A757F6; /* Bright Purple for links */
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #A757F6; /* Bright Purple for social icons */
+}
+
+.social-icons a:hover {
+  color: #8A3ECC; /* Slightly darker purple on hover */
+}
+
+.right-section {
+  flex: 2;
+  padding: 10px;
+  text-align: left;
+  padding-right: 30px; /* Add space on the right side of the paragraph */
+  color: #212B39; /* Dark Gray/Black for paragraph text */
+}
+
+.right-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    text-align: center;
+    padding-right: 0; /* Remove right padding on smaller screens */
+  }
+}

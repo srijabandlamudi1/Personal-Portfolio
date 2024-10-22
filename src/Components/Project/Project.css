@@ -1,0 +1,150 @@
+.projects-section {
+    padding: 50px 0;
+    padding-left: 60px; /* Added padding on the left */
+    padding-right: 60px; /* Added padding on the right */
+    text-align: center;
+    background-color: white; /* Light Pastel Purple Background */
+}
+
+.projects-heading {
+    font-size: 2.5em;
+    color: #A757F6; /* Bright Purple */
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Enable horizontal scroll for projects container */
+.projects-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping, keep all cards in a single line */
+    justify-content: flex-start; /* Align cards from the start */
+    gap: 20px; /* Space between cards */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 20px; /* Padding around the container */
+    max-width: 1200px; /* Set a maximum width to center the container */
+    margin: 0 auto; /* Center the container on the page */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #A757F6 #F8F5FF; /* Custom scrollbar colors */
+}
+
+/* Customize scrollbar for Webkit browsers */
+.projects-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: #F8F5FF; /* Track color */
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background-color: #A757F6; /* Handle color */
+    border-radius: 10px;
+}
+
+/* Existing project card CSS */
+.project-card {
+    width: 300px;
+    border: 2px solid #A757F6; /* Bright Purple Border */
+    border-radius: 10px;
+    background-color: #F8F5FF; /* Light Pastel Purple Background */
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    flex: 0 0 auto; /* Ensure cards do not stretch */
+    transform: scale(1); /* Default scale */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    animation: fadeIn 0.8s ease forwards; /* Fade-in animation */
+}
+
+/* Hover animation */
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.window-buttons span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red { background-color: #FF5F56; }
+.yellow { background-color: #FFBD2E; }
+.green { background-color: #27C93F; }
+
+.project-header h3 {
+    font-size: 1em;
+    color: #212B39; /* Dark Gray/Black */
+    margin: 0;
+}
+
+/* Adjusted content styling with vertical scroll */
+.project-content {
+    background-color: #FFFFFF; /* White background for code */
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 200px; /* Set a maximum height */
+    color: #212B39;
+    text-align: left; /* Ensure text is left-aligned */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #A757F6 #F8F5FF; /* Custom scrollbar colors */
+}
+
+/* Customize scrollbar for Webkit browsers */
+.project-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.project-content::-webkit-scrollbar-track {
+    background: #F8F5FF; /* Track color */
+}
+
+.project-content::-webkit-scrollbar-thumb {
+    background-color: #A757F6; /* Handle color */
+    border-radius: 10px;
+}
+
+.keyword {
+    color: #D36AC2; /* Light Pink for keywords */
+}
+
+.property {
+    color: #F9A825; /* Orange for properties */
+}
+
+.string {
+    color: #43A047; /* Green for strings */
+}
+
+.array {
+    color: #1E88E5; /* Blue for array elements */
+}
+
+/* Fade-in animation for cards */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,73 @@
+/* Ensure the entire background section blends seamlessly */
+.contact-form-section {
+  background-color: #FFFFFF !important; /* White Background with !important to override conflicts */
+  padding: 50px 0; /* Adjust padding to create space */
+  text-align: center;
+}
+
+/* Adjust the form container itself */
+.contact-form-container {
+  background-color: #F8F5FF; /* Light Gray Background */
+  color: #212B39; /* Dark Gray/Black Text */
+  padding: 50px;
+  text-align: center;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto; /* Center the form horizontally */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #A757F6; /* Bright Purple for header */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #E9E9E9; /* Light Gray border */
+  border-radius: 5px;
+  background-color: #FFFFFF; /* White background for inputs */
+  color: #212B39; /* Dark Gray/Black Text */
+  font-size: 1em;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05); /* Soft inset shadow */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #B3B3B3; /* Subtle gray for placeholders */
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Button styling */
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A757F6; /* Bright Purple for the button */
+  color: #FFFFFF; /* White text */
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8A3ECC; /* Slightly darker shade on hover */
+}
+
+button:active {
+  background-color: #6A0DAD; /* Even darker shade when clicked */
+}

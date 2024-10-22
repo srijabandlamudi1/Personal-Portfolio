@@ -1,0 +1,107 @@
+.projects {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 80px;
+    padding: 50px 20px; /* Added padding to ensure space on the sides */
+    text-align: center;
+    background-color: white !important;
+    color: #212B39; /* Dark Gray/Black text for readability */
+}
+
+.projects-title {
+    position: relative;
+    margin-top: 100px;
+}
+
+.projects-title h1 {
+    padding: 0px 30px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 100px;
+    color: #A757F6; /* Bright Purple for consistency with other titles */
+}
+
+/* .projects-title h1 span {
+    background: linear-gradient(270deg, #A757F6 10%, #E9E9E9 100%); /* Gradient with Bright Purple and Light Gray 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}*/
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the cards to wrap to the next line */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Set a maximum width to limit how wide the content stretches */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.projects-card {
+    width: 300px; /* Adjust width for consistent card sizing */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative;
+    background-color: #f8f5ff; /* Light Gray background for a soft look */
+    color: #212B39; /* Dark Gray/Black text for readability */
+}
+
+.projects-card h2 {
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #212b39; /* Bright Purple for card titles */
+    font-size: 22px;
+}
+
+.projects-card p {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.projects-card:hover {
+    transform: scale(1.05);
+}
+
+.tooltip1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A757F6; /* Fully opaque Bright Purple */
+    color: #FFFFFF; /* White text for contrast */
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text alignment */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.projects-card:hover .tooltip1 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.tooltip1 h3, .tooltip1 p {
+    margin: 10px 0; /* Add margin for spacing */
+    padding: 0 10px; /* Padding for better readability */
+}
+

@@ -1,0 +1,104 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F8F5FF; /* Light Pastel Purple Background */
+    padding: 80px 20px;
+    min-height: 80vh;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #212B39; /* Dark Gray/Black */
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; /* Modern, sleek font */
+}
+
+.hero h1 span {
+    color: #A757F6; /* Bright Purple for emphasized text */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #212B39; /* Dark Gray/Black */
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif; /* Consistent font style */
+}
+
+/* Button Styles */
+.hero-action {
+    display: flex;
+    gap: 15px; /* Adjust gap between buttons */
+    margin-top: 25px; /* Added margin for better spacing */
+}
+
+.hero-cv, .hero-contact {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 25px; /* Smooth, rounded edges */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* Remove underline for links */
+}
+
+/* Ensure links inside buttons inherit proper styling */
+.hero-cv a, .hero-contact a {
+    color: inherit; /* Inherit color from the button */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link cover the entire button area */
+}
+
+/* Primary Button */
+.hero-cv {
+    background-color: #A757F6; /* Bright Purple */
+    color: #FFFFFF; /* White text */
+    border: none;
+    margin-right: 10px; /* Ensure proper spacing to the right */
+}
+
+.hero-cv:hover {
+    background-color: #8A3ECC; /* Slightly darker shade of purple on hover */
+}
+
+/* Secondary Button */
+.hero-contact {
+    background-color: #E9E9E9; /* Light Gray for secondary button */
+    color: #A757F6; /* Bright Purple text */
+    border: 2px solid #A757F6; /* Bright Purple border */
+}
+
+.hero-contact:hover {
+    background-color: #A757F6; /* Bright Purple on hover */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #A757F6; /* Maintain border */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-action {
+        flex-direction: column;
+    }
+
+    .hero-cv, .hero-contact {
+        width: 80%;
+        text-align: center;
+        margin: 8px 0; /* Adjust margins for mobile layout */
+    }
+}

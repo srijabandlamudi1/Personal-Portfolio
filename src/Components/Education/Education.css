@@ -1,0 +1,133 @@
+.education-experience {
+  background-color: #F8F5FF; /* Light Pastel Purple Background */
+  color: #212B39; /* Dark Gray/Black text */
+  padding: 50px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Consistent modern font */
+  position: relative;
+  overflow: hidden;
+}
+.education-experience h2{
+  padding: 0px 30px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 100px;
+    color: #A757F6; /* Bright Purple for consistency with other titles */
+}
+
+.edu-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.edu-timeline-entry {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  perspective: 1000px; /* Enable 3D perspective for flip */
+  margin-bottom: 30px;
+}
+
+.edu-timeline-entry.left {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+
+.edu-timeline-entry.right {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+.edu-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #A757F6; /* Bright Purple Background */
+  color: #FFFFFF; /* White text for icons */
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.edu-timeline-entry.left .edu-icon-container {
+  right: -20px;
+}
+
+.edu-timeline-entry.right .edu-icon-container {
+  left: -20px;
+}
+
+.edu-flip-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+.edu-timeline-entry:hover .edu-flip-card {
+  transform: rotateY(180deg); /* Smooth flip on hover */
+}
+
+.edu-flip-card-front, .edu-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide backface to prevent mirrored text */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #D1C4E9; /* Light Gray background */
+  color: #212B39; /* Dark Gray/Black text */
+  box-sizing: border-box;
+}
+
+.edu-flip-card-front {
+  transform: rotateY(0deg); /* Default front view */
+  z-index: 2;
+}
+
+.edu-flip-card-back {
+  transform: rotateY(180deg); /* Hide back initially */
+  background-color: white; /* Light Pastel Purple (slightly different shade) */
+  z-index: 1;
+}
+
+/* Text styling for proper alignment */
+.edu-flip-card-front h3, .edu-flip-card-back h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #A757F6; /* Bright Purple for headings */
+}
+
+.edu-flip-card-front p, .edu-flip-card-back p {
+  font-size: 1rem;
+  margin: 5px 0;
+  text-align: center; /* Center text */
+  color: #212B39; /* Consistent text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .edu-timeline-entry {
+      width: 100%;
+      float: none;
+      margin-bottom: 20px;
+  }
+  .edu-timeline-entry.left, .edu-timeline-entry.right {
+      text-align: center; /* Center on smaller screens */
+  }
+}
