@@ -9,7 +9,7 @@ import ContactForm from "./Components/ContactForm/Contactform"
 import SideNavbar from "./Components/SideNavbar/SideNAvbar"
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"
 import ProjectsList from "./Components/Project/ProjectsList"
-
+import TicTacToe from "./Components/TicTacToe/TicTacToe";
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
       <ProjectsList/>
       <Education/>
       <ContactForm/>
+      <TicTacToe /> 
     </div>
   )
 }

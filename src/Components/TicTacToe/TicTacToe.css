@@ -1,0 +1,221 @@
+/* Root Variables from Hero Theme */
+:root {
+    --primary-color: #A757F6; /* Bright Purple */
+    --secondary-color: #8A3ECC; /* Slightly Darker Purple */
+    --background-color: #F8F5FF; /* Light Pastel Purple */
+    --button-bg: #A757F6;
+    --button-hover-bg: #8A3ECC;
+    --text-color: #212B39; /* Dark Gray */
+    --highlight-color: #FFFFFF; /* White Text */
+}
+
+/* Ensure Only Tic-Tac-Toe Page Background is Purple */
+.tictactoe-page {
+    background-color: var(--background-color);
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+/* TicTacToe Main Container */
+.tictactoe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Game Title */
+.tictactoe-container h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* TicTacToe Quote */
+.tictactoe-quote {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    animation: quote-pop 2s ease-in-out infinite alternate;
+}
+
+/* Quote Animation: Continuous Fade-in with Bounce */
+@keyframes quote-pop {
+    0% {
+        opacity: 0.7;
+        transform: translateY(-5px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateY(-5px);
+    }
+}
+
+/* Game Status */
+.tictactoe-status {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TicTacToe Board */
+.tictactoe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* TicTacToe Cell */
+.tictactoe-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    animation: cell-pop 0.3s ease-in-out;
+}
+
+/* Pop-in Animation for Cells */
+@keyframes cell-pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hover Effect for Cell */
+.tictactoe-cell:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Winning Cell Animation */
+.tictactoe-cell.winning-cell {
+    animation: winning-glow 1s infinite alternate;
+    background-color: var(--button-hover-bg);
+}
+
+/* Winning Glow Animation */
+@keyframes winning-glow {
+    0% {
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--secondary-color);
+    }
+}
+
+/* Reset Button */
+.tictactoe-reset {
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 25px;
+    background-color: var(--button-bg);
+    color: var(--highlight-color);
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Restart Button Bounce Animation */
+.tictactoe-reset:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+    animation: button-bounce 0.3s ease-in-out;
+}
+
+/* Button Bounce Animation */
+@keyframes button-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Difficulty Dropdown */
+.tictactoe-difficulty {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.tictactoe-difficulty label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.tictactoe-difficulty select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.tictactoe-difficulty select:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tictactoe-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .tictactoe-cell {
+        font-size: 2rem;
+    }
+
+    .tictactoe-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .tictactoe-status {
+        font-size: 1rem;
+    }
+}

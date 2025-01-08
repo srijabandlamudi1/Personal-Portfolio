@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
+            <button className="navbar-toggle" onClick={toggleMenu}>
+                &#9776; {/* Unicode for hamburger menu icon */}
+            </button>
             <ul className="nav-menu">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#About">ABOUT</a></li>
+                <li><a href="#Experience">EXPERIENCE</a></li>
+                <li><a href="#Project">PROJECTS</a></li>
+                <li><a href="#Contact">CONTACT</a></li>
             </ul>
         </nav>
     );

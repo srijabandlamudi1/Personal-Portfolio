@@ -29,15 +29,18 @@ const SideNavbar = () => {
                         </a>
                         <span className="tooltip">Instagram</span>
                     </div>
-                </li>
-                <li>
-                    <div className="sidenav-icon-container">
-                        <a href="https://github.com/srijabandlamudi1" target="_blank" rel="noopener noreferrer">
-                            <FaGithub />
-                        </a>
-                        <span className="tooltip">GitHub</span>
-                    </div>
-                </li>
+                </li> 
+              
+                {/*
+    <li>
+        <div className="sidenav-icon-container">
+            <a href="https://github.com/srijabandlamudi1" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+            </a>
+            <span className="tooltip">GitHub</span>
+        </div>
+    </li> 
+*/}
             </ul>
         </div>
     );

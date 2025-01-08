@@ -33,7 +33,7 @@ form {
 
 input, textarea {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #E9E9E9; /* Light Gray border */
   border-radius: 5px;
   background-color: #FFFFFF; /* White background for inputs */
@@ -41,6 +41,7 @@ input, textarea {
   font-size: 1em;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05); /* Soft inset shadow */
 }
+
 
 input::placeholder, textarea::placeholder {
   color: #B3B3B3; /* Subtle gray for placeholders */
@@ -62,6 +63,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: center;
 }
 
 button:hover {

@@ -23,9 +23,24 @@ const Skills = () => {
   return (
     <div id="Skills" className="skills">
       <div className="skills-title">
-        <h1><span>My Skills</span></h1>
+        <h1><span>MY SKILLS</span></h1>
       </div>
       <div className="skills-container">
+      <div className="card">
+          <img src={javaLogo} alt="java Logo" />
+        </div>
+        <div className="card">
+          <img src={pythonLogo} alt="python Logo" />
+        </div>
+        <div className="card">
+          <img src={javascriptLogo} alt="javascript Logo" />
+        </div>
+        <div className="card">
+          <img src={reactLogo} alt="react Logo" />
+        </div>
+        <div className="card"> 
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png" alt="Docker Logo"/>
+        </div>
       <div className="card">
           <img src={angularLogo} alt="Angular Logo" />
           <span className="tooltip">Angular</span>
@@ -51,12 +66,6 @@ const Skills = () => {
           <img src={springbootLogo} alt="springboot Logo" />
         </div>
         <div className="card">
-          <img src={reactLogo} alt="react Logo" />
-        </div>
-        <div className="card">
-          <img src={pythonLogo} alt="python Logo" />
-        </div>
-        <div className="card">
           <img src={tableauLogo} alt="tableau Logo" />
         </div>
         <div className="card">
@@ -66,16 +75,10 @@ const Skills = () => {
           <img src={nodejsLogo} alt="nodejs Logo" />
         </div>
         <div className="card">
-          <img src={javaLogo} alt="java Logo" />
-        </div>
-        <div className="card">
           <img src={mongodbLogo} alt="mongodb Logo" />
         </div>
         <div className="card">
           <img src={mysqlLogo} alt="mysql Logo" />
-        </div>
-        <div className="card">
-          <img src={javascriptLogo} alt="javascript Logo" />
         </div>
       </div>
     </div>
